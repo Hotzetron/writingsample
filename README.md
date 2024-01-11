@@ -30,7 +30,9 @@ This quide only applies to the migration of existing, OPNSense VLAN interfaces t
 ## Summary
 
 If you are running into link saturation or network congestion issues when multiple clients are pushing high-throughput workloads, it may be beneficial to migrate those client VLAN interfaces from a single parent interface to a link aggreggation interface. 
+
 Doing so will allow the traffic from those clients to traverse different physical ports, enabling individual clients to fully utilize their own network interfaces without fully saturating an upstream interface on the switch or router. 
+
 In this guide we will break down the steps for creating a new LAGG interface on OPNSense, and moving existing VLANs to from their current parent interface to the new LAGG, which will act as the trunk to the downstream Mikrotik switch.
 
 ## Preparing the Switch
